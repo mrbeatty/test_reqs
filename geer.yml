@@ -1,0 +1,12 @@
+---
+- name: 'Add a host to the inventory and ping'
+  hosts: servera
+  gather_facts: false
+  user: ansible
+  tasks:
+
+    - name: 'Ping servera'
+      ping:
+
+  roles:
+    - role: backup_server
